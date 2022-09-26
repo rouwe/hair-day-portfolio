@@ -1,0 +1,21 @@
+:root {
+    font-size: 16px;
+    --primary-color: hsl(9, 58%, 56%);
+    --secondary-color: hsl(189, 58%, 56%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --footer-bg: rgba(25, 33, 35, 0.912)
+}
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    padding: 5%;
+}
+
+/* Header */
+/* Navigation */
+/* Main */
+/* Footer */
