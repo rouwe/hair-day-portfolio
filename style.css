@@ -21,10 +21,18 @@ button {
     border-radius: 2rem;
     padding: 0.75rem 2.25rem;
 }
+body {
+    display: grid;
+    grid-template: 'header' auto
+                    'navigation' auto
+                    'main' auto
+                    'footer' auto / 100%;
+}
 /* Header */
 .header {
     padding: 0.85rem 0;
     width: 100%;
+    grid-area: header;
 }
 .header-logo {
     display: block;
@@ -35,6 +43,7 @@ button {
 .navigation {
     box-shadow: 0 -1px 2px var(--nav-shadow-light), 
     0 3px 2px 1px var(--nav-shadow-heavy);
+    grid-area: navigation;
     margin: 0 0 0.2rem;
 }
 .navigation-wrapper {
@@ -60,6 +69,9 @@ button {
     opacity: 1;
 }
 /* Main */
+.main {
+    grid-area: main;
+}
 .promotion {
     align-items: center;
     background-color: hsla(0, 0%, 10%, 0.25);
@@ -139,6 +151,7 @@ button {
     background-color: var(--black);
     display: flex;
     flex-flow: column wrap;
+    grid-area: footer;
     justify-content: center;
     padding: 3.75rem;
     row-gap: 1.5rem;
