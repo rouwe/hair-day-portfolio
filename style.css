@@ -1,5 +1,5 @@
 :root {
-    font-size: 16px;
+    font-size: 100%;
     --primary-color: hsl(9, 58%, 56%);
     --secondary-color: hsl(189, 58%, 56%);
     --white: hsl(0, 0%, 100%);
@@ -41,8 +41,8 @@ body {
 }
 /* Navigation */
 .navigation {
-    box-shadow: 0 -1px 2px var(--nav-shadow-light), 
-    0 3px 2px 1px var(--nav-shadow-heavy);
+    box-shadow: 0 -0.0625rem 0.125rem var(--nav-shadow-light), 
+    0 0.1875rem 0.125rem 0.0625rem var(--nav-shadow-heavy);
     grid-area: navigation;
     margin: 0 0 0.2rem;
 }
@@ -62,8 +62,43 @@ body {
 }
 .nav-link {
     color: var(--black);
+    position: relative;
     text-decoration: none;
+    transition: all 0.5s ease-out 0s;
 }
+.nav-link:link,
+.nav-link:visited {
+    font-weight: 400;
+    opacity: 0.65;
+}
+.nav-link:hover {
+    opacity: 1;
+}
+.nav-link:active {
+    color: var(--primary-color);
+    opacity: 0.75;
+}
+.nav-link::after {
+    animation: hover-border 0.4s ease-out 0s forwards;
+}
+.nav-link:hover::after {
+    border-bottom: 0.125rem ridge var(--primary-color);
+    border-radius: 1rem 1rem 0 0;
+    bottom: -0.75vh;
+    content: '';
+    position: absolute;
+}
+@keyframes hover-border {
+    0% {
+        left: 50%;
+        width: 0%;
+    }
+    100% {
+        left: 0;
+        width: 100%;
+    }
+}
+.nav-link
 .link-active {
     font-weight: 700;
     opacity: 1;
@@ -74,10 +109,6 @@ body {
 }
 .promotion {
     align-items: center;
-    background-color: hsla(0, 0%, 10%, 0.25);
-    background-image: url('/images/');
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     flex-flow: column-reverse wrap;
     text-align: center;
@@ -108,9 +139,30 @@ body {
 }
 .cta-book-now {
     background-color: var(--secondary-color);
-    color: var(--white);
-    filter: drop-shadow(0 2px 2px var(--nav-shadow-light));
+    cursor: pointer;
+    filter: drop-shadow(0 0.125rem 0.125rem var(--nav-shadow-light));
     font-weight: 700;
+    padding: 0;
+    transition: all 0.1s ease-in 0.05s;
+}
+.cta-book-now:hover {
+    background-color: var(--white);
+    color: var(--secondary-color);
+    opacity: 0.75;
+}
+.cta-book-now:active {
+    filter: drop-shadow(0 0rem 0rem var(--nav-shadow-light));
+    transform: scale(0.98);
+    opacity: 1;
+}
+.cta-text {
+    color: var(--white);
+    display: inline-block;
+    padding: 0.75rem 2.25rem;
+    width: 100%;
+}
+.cta-text:hover {
+    color: var(--secondary-color);
 }
 .promotion-offer {
     align-self: stretch;
@@ -196,7 +248,7 @@ body {
         margin: 2rem 0;
         width: 80%;
     }
-    .cta-book-now {
+    .cta-text {
         padding: 0.85rem 2.75rem;
     }
     .promotion-offer {
