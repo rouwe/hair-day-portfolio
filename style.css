@@ -111,8 +111,26 @@ body {
     align-items: center;
     display: flex;
     flex-flow: column-reverse wrap;
+    position: relative;
     text-align: center;
     width: 100%;
+    z-index: 2;
+}
+.promotion::before {
+    background: no-repeat url('/images/hero-image-650x360.jpg')
+    50%/cover;
+    content: '';
+    filter: blur(0.2rem) brightness(0.4);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.promotion-copy,
+.promotion-offer {
+    width: 100%;
+    z-index: 2;
 }
 .promotion-copy {
     align-items: center;
@@ -123,6 +141,7 @@ body {
     padding: 0 1.75rem;
 }
 .promotion-heading {
+    color: var(--white);
     font-size: 2rem;
     font-weight: 400;
 }
@@ -237,6 +256,10 @@ body {
         padding: 1rem 2rem;
     }
     /* Main */
+    .promotion::before {
+        background-image: url('/images/hero-image-1280x720.jpg');
+        background-position: 20% 5vmin;
+    }
     .promotion-copy {
         height: 90vh;
         padding: 0 10rem;
@@ -282,6 +305,9 @@ body {
         justify-content: center;
     }
     /* Main */
+    .promotion::before {
+        background-image: url('/images/hero-image-1920x1080.jpg');
+    }
     .promotion-copy {
         align-items: flex-start;
         align-self: flex-start;
