@@ -204,6 +204,7 @@ body {
     display: flex;
     flex-flow: column wrap;
     row-gap: 0.5rem;
+    text-align: left;
 }
 .service-info:first-child,
 .service-info:nth-child(2) {
