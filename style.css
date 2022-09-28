@@ -213,6 +213,10 @@ body {
 .services-heading {
     margin: 1rem 0 0.25rem;
 }
+.services-description {
+    line-height: 1.3rem;
+    opacity: 0.75;
+}
 .thumbnail {
     border-radius: 0.3rem;
     width: 100%;
@@ -317,6 +321,12 @@ body {
         text-align: left;
         padding: 6rem 2.5rem 0 9.5rem;
         width: 50%;
+    }
+    .promotion-heading {
+        width: 90%;
+    }
+    .promotion-divider {
+        width: 70%;
     }
     .services-offered {
         align-items: flex-start;
