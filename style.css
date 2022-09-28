@@ -117,7 +117,7 @@ body {
     z-index: 2;
 }
 .promotion::before {
-    background: no-repeat url('/images/hero-image-650x360.jpg')
+    background: no-repeat url('https://raw.githubusercontent.com/rouwe/hair-day-portfolio/main/images/hero-image-650x360.jpg')
     50%/cover;
     content: '';
     filter: blur(0.2rem) brightness(0.4);
@@ -262,7 +262,7 @@ body {
     }
     /* Main */
     .promotion::before {
-        background-image: url('/images/hero-image-1280x720.jpg');
+        background-image: url('https://raw.githubusercontent.com/rouwe/hair-day-portfolio/main/images/hero-image-1280x720.jpg');
         background-position: 20% 5vmin;
     }
     .promotion-copy {
@@ -311,7 +311,7 @@ body {
     }
     /* Main */
     .promotion::before {
-        background-image: url('/images/hero-image-1920x1080.jpg');
+        background-image: url('https://raw.githubusercontent.com/rouwe/hair-day-portfolio/main/images/hero-image-1920x1080.jpg');
     }
     .promotion-copy {
         align-items: flex-start;
